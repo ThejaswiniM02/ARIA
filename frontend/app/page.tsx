@@ -27,7 +27,7 @@ export default function Home() {
     const fakeProgress3 = setTimeout(() => setStep("writer"), 5400);
 
     try {
-      const res = await fetch("https://aria-9ptz.onrender.com", {
+      const res = await fetch("https://aria-9ptz.onrender.com/research", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query, mode }),
@@ -52,7 +52,7 @@ export default function Home() {
   const handleSelectHistory = async (id: string) => {
     setLoading(true);
     try {
-      const res = await fetch(`https://aria-9ptz.onrender.com/${id}`);
+      const res = await fetch(`https://aria-9ptz.onrender.com/research/${id}`);
       const data = await res.json();
       setReport(data.report);
       setSources(data.sources || []);
