@@ -1,17 +1,20 @@
 import chromadb
 import os
-import google.generativeai as genai
+from google import genai
 from dotenv import load_dotenv
 
 load_dotenv()
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+client_genai = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 client = chromadb.Client()
 collection = client.get_or_create_collection(name="research_docs")
 
 def embed_text(text: str) -> list[float]:
-    result = genai.embed_content(model="models/text-embedding-004", content=text)
-    return result["embedding"]
+    result = client_genai.models.embed_content(
+        model="text-embedding-004",
+        contents=text
+    )
+    return result.embeddings[0].values
 
 def add_documents(docs: list[dict]):
     if not docs:
