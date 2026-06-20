@@ -1,4 +1,4 @@
-# ARIA — Autonomous Research Intelligence Agent
+# ARIA: Autonomous Research Intelligence Agent
 
 A multi-agent AI research assistant that takes a query, sends it through four specialized agents, and returns a structured research report with sources.
 
@@ -19,15 +19,10 @@ Two modes:
 ## How it works
 Query
 
-│
+─ Web mode ──────► Research Agent (DuckDuckGo)
 
-├─ Web mode ──────► Research Agent (DuckDuckGo)
+─ Academic mode ─► Academic Research Agent (Semantic Scholar + arXiv + PubMed)
 
-└─ Academic mode ─► Academic Research Agent (Semantic Scholar + arXiv + PubMed)
-
-│
-
-▼
 
 Retrieval Agent
 
@@ -36,23 +31,14 @@ Retrieval Agent
 routes through vector embedding + retrieval
 
 if sources are large/numerous)
-
-│
-
+|
 ▼
-
 Analysis Agent (extracts key facts)
-
-│
-
+|
 ▼
-
 Comparison Agent (structures findings)
-
-│
-
+|
 ▼
-
 Writer Agent (produces final report)
 
 Built with **LangGraph** for orchestration — each agent is a node, edges define what runs next, with conditional branching for web vs academic mode.
