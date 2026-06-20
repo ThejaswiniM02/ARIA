@@ -19,15 +19,10 @@ Two modes:
 ## How it works
 Query
 
-│
+─ Web mode ──────► Research Agent (DuckDuckGo)
 
-├─ Web mode ──────► Research Agent (DuckDuckGo)
+─ Academic mode ─► Academic Research Agent (Semantic Scholar + arXiv + PubMed)
 
-└─ Academic mode ─► Academic Research Agent (Semantic Scholar + arXiv + PubMed)
-
-│
-
-▼
 
 Retrieval Agent
 
@@ -37,21 +32,18 @@ routes through vector embedding + retrieval
 
 if sources are large/numerous)
 
-│
-
-▼
+    |
+    ▼
 
 Analysis Agent (extracts key facts)
 
-│
-
-▼
+    |
+    ▼
 
 Comparison Agent (structures findings)
 
-│
-
-▼
+    |
+    ▼
 
 Writer Agent (produces final report)
 
