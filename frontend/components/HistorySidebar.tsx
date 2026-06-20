@@ -21,7 +21,7 @@ export default function HistorySidebar({
   const [items, setItems] = useState<HistoryItem[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/history")
+    fetch("https://aria-9ptz.onrender.com/history")
       .then((res) => res.json())
       .then((data) => setItems(data.items || []))
       .catch(() => setItems([]));
