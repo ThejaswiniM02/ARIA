@@ -9,3 +9,4 @@ requests
 pydantic
 python-dotenv
 ddgs
+google-genai
