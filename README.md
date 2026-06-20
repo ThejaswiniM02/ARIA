@@ -1,4 +1,4 @@
-# ARIA:Autonomous Research Intelligence Agent
+# ARIA: Autonomous Research Intelligence Agent
 
 A multi-agent AI research assistant that takes a query, sends it through four specialized agents, and returns a structured research report with sources.
 
