@@ -8,4 +8,4 @@ chromadb
 requests
 pydantic
 python-dotenv
-duckduckgo-search
+ddgs
