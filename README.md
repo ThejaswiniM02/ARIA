@@ -17,29 +17,23 @@ Two modes:
 ---
 
 ## How it works
-Query
+User Query
 
-─ Web mode ──────► Research Agent (DuckDuckGo)
+↓
 
-─ Academic mode ─► Academic Research Agent (Semantic Scholar + arXiv + PubMed)
+Research Agent     →  Collects sources (web + academic)
 
+↓
 
-Retrieval Agent
+Analysis Agent     →  Extracts key facts and arguments
 
-(skips straight through for small result sets,
+↓
 
-routes through vector embedding + retrieval
+Comparison Agent   →  Identifies patterns, contrasts, consensus
 
-if sources are large/numerous)
-|
-▼
-Analysis Agent (extracts key facts)
-|
-▼
-Comparison Agent (structures findings)
-|
-▼
-Writer Agent (produces final report)
+↓
+
+Writer Agent       →  Produces structured report with citations
 
 Built with **LangGraph** for orchestration — each agent is a node, edges define what runs next, with conditional branching for web vs academic mode.
 
