@@ -2,7 +2,7 @@
 
 A multi-agent AI research assistant that takes a query, sends it through four specialized agents, and returns a structured research report with sources.
 
-**Live demo:** [link once deployed]
+**Live demo:** https://aria-tau-liart.vercel.app/
 
 ---
 
